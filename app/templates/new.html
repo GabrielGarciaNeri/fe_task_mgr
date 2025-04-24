@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Task({{ error }}){% endblock title %}
+
+{% block content %}
+<h1>Edit Task</h1>
+<form method="post" action="{{ url_for('create_task') }}">
+    <p>
+        <label>Name</label>
+        <input type="text" name="name" id="id_name" maxlength="64" required>
+    </p>
+    <p>
+        <label>Summary</label>
+        <input type="text" name="summary" id="id_summary" maxlength="128" required>
+    </p>
+    <p>
+        <label>Description</label>
+        <textarea cols="80" rows="16" name="description" id="id_description" maxlength="64" required></textarea>
+    </p>
+    <input type="hidden" value="{{ task['is_done'] }}" name="is_done" id="id_is_done">
+    <input type="submit" class="btn btn-success" value="Edit">
+</form>
+{% endblock content %}

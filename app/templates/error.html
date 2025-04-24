@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %}Error ({{ error }}){% endblock title %}
+
+{% block content %}
+<h1>Error ({{ error }})</h1>
+<p>The request you attempted failed with the following status code: {{ error }}</p>
+{% endblock content %}

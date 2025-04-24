@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ task["name"] }}{% endblock title %}
+
+{% block content %}
+<h1>Name: {{ task["name"] }}</h1>
+<h1>Summary: {{ task["summary"] }}</h1>
+<small>
+    Status:
+    {% if task["is_done"] %}
+        Done
+    {% else %}
+        Not Done
+    {% endif %}
+</small>
+<p>Description: {{ task["description"] }}</p>
+
+{% endblock content %}
