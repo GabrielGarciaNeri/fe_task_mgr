@@ -17,7 +17,9 @@
         <label>Description</label>
         <textarea cols="80" rows="16" name="description" id="id_description" maxlength="64" required></textarea>
     </p>
-    <input type="hidden" value="{{ task['is_done'] }}" name="is_done" id="id_is_done">
+    {# 
+     <input type="hidden" value="{{ task['is_done'] }}" name="is_done" id="id_is_done">
+    #}
     <input type="submit" class="btn btn-success" value="Edit">
 </form>
 {% endblock content %}

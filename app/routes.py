@@ -44,10 +44,11 @@ def get_task(pk):
 #New tasks Routes
 @app.get("/tasks/new")
 def new_form():
+    print("New form....")
     return render_template("new.html")
 
-@app.get("/tasks/new")
-def trash_form():
+@app.get("/tasks/new/<int:pk>")
+def trash_form(pk):
     return render_template("trash.html")
 
 
