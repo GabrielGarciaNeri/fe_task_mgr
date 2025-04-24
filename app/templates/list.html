@@ -25,7 +25,7 @@
                 <a href="{{ url_for('new_form', pk=task['id']) }}" alt="Edit">
                     <i class="bi bi-pencil"></i>
                 </a>
-                <a href="#">
+                <a href="{{ url_for('trash_form', pk=task['id']) }}" alt="Delete">
                     <i class="bi bi-trash"></i>
                 </a>
             </td>

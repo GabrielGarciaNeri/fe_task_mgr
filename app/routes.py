@@ -46,6 +46,11 @@ def get_task(pk):
 def new_form():
     return render_template("new.html")
 
+@app.get("/tasks/new")
+def trash_form():
+    return render_template("trash.html")
+
+
 @app.post("/tasks/new")
 def create_task():
     task_data = flask_request.form
